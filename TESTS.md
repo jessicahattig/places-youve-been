@@ -1,8 +1,8 @@
 Description: Destinations()
 
 Test: "It should create an object from the users inputted destination. "
-Code: const destination = new Destination ("Utah", "Zion", "spring", "Beautiful"); 
-      console.log(destination);
+Code: >const destination = new Destination ("Utah", "Zion", "spring", "Beautiful"); 
+      >console.log(destination);
 Expected Output: Object { location: "Utah", landmarks: "Zion", timeOfYear: "spring", notes: "Beautiful" }
 
 Description: DestinationsList()
@@ -22,12 +22,17 @@ Code: >const destinationsList = new DestinationsList();
 Expected Output: currentId: 1
 
 Test: "It should find added destinations using their ID." 
-Code: destinationsList.findDestination(1);
+Code: >destinationsList.findDestination(1);
       >const destination1 = new Destination("Utah", "Zion", "spring", "Beautiful")
       >const destination2 = new Destination('Oregon','Crater Lake', 'Summer', 'Beautiful landscapes');
       >const destination3 = new Destination('France', 'Louvre Museum', 'Spring', 'Historical landmarks');
 Expected Output: Destination {location: "Utah", landmarks: "Zion", timeOfYear: "Spring", notes: "Beautiful"}
 
-<!-- Test: "It should return false if destination ID is undefined."
+Test: "It should return false if destination ID is undefined."
 Code: destinationsList.findDestination(Q);
-Expected Output: false -->
+Expected Output: false
+
+Test: "It should delete destinations per their Id's without altering the number of Id's"
+Code: destinationsList.deleteDestination(2);
+Expected Output: currentId: 3;
+                 destinations: Object { 1: {...}, 3: {...} }

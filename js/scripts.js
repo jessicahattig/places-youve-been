@@ -21,6 +21,13 @@ DestinationsList.prototype.findDestination = function(id) {
   return false;
 }
   
+DestinationsList.prototype.deleteDestination = function(id) {
+  if (this.destinations[id] === undefined) {
+    return false;
+  }
+  delete this.destinations[id];
+  return true;
+}
 
 //Business logic for destinations
 function Destination(location, landmarks, timeOfYear, notes) {

@@ -3,9 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/scripts.js"></script>
+  <title>Destination Tracker</title>
 </head>
 <body>
+  <h1>Destination Tracker</h1>
+  <h2>Log a Destination:</h2>
+  <form id="new-destination">
+    <label for="new-location">Location</label>
+    <input type="text" id="new-location">
+    <label for="new-landmarks">Landmarks</label>
+    <input type="text" id="new-landmarks">
+    <label for="new-time-of-year">Time of Year</label>
+    <input type="text" id="new-time-of-year">
+    <label for="new-notes">Notes</label>
+    <input type="text" id="new-notes">
+    <button type="submit">Log</button>
+  </form>
+
+  <h2>Destinations:</h2>
+  <div id="destinations">
+  </div>
+
+  <div id="destination-details" class="hidden">
+    <h2>Destination Details:</h2>
+    <ul>
+      <li>Location:</li>
+      <li>Landmarks:</li>
+      <li>Time of Year:
   
 </body>
 </html>
