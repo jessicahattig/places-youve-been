@@ -60,7 +60,7 @@ window.addEventListener("click", function() {
   })
   //document.getElementById("destinations").append(location)
 }
-
+//UI functions
 //display destinations
 //display destination details
   //when user clicks on destination
