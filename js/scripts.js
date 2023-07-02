@@ -1,11 +1,16 @@
 //Business logic for DestinationsList
 function DestinationsList() {
   this.destinations = {};
+  this.currentId = 0;
 }
 
 DestinationsList.prototype.addDestination = function(destination) {
-  this.destinations[destination.location] = destination;
-  return this.destinations;
+  destination.id = this.assignId();
+  this.destinations[destination.id] = destination;
+}
+DestinationsList.prototype.assignId = function() {
+  this.currentId += 1;
+  return this.currentId;
 }
   
 
