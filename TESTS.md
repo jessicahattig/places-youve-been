@@ -20,3 +20,14 @@ Code: >const destinationsList = new DestinationsList();
       >destinationsList.addDestination(newDestination);
       >console.log(destinationsList)
 Expected Output: currentId: 1
+
+Test: "It should find added destinations using their ID." 
+Code: destinationsList.findDestination(1);
+      >const destination1 = new Destination("Utah", "Zion", "spring", "Beautiful")
+      >const destination2 = new Destination('Oregon','Crater Lake', 'Summer', 'Beautiful landscapes');
+      >const destination3 = new Destination('France', 'Louvre Museum', 'Spring', 'Historical landmarks');
+Expected Output: Destination {location: "Utah", landmarks: "Zion", timeOfYear: "Spring", notes: "Beautiful"}
+
+<!-- Test: "It should return false if destination ID is undefined."
+Code: destinationsList.findDestination(Q);
+Expected Output: false -->

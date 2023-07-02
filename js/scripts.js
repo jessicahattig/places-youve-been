@@ -8,9 +8,17 @@ DestinationsList.prototype.addDestination = function(destination) {
   destination.id = this.assignId();
   this.destinations[destination.id] = destination;
 }
+
 DestinationsList.prototype.assignId = function() {
   this.currentId += 1;
   return this.currentId;
+}
+
+DestinationsList.prototype.findDestination = function(id) {
+  if (this.destinations[id] !== undefined) {
+    return this.destinations[id];
+  }
+  return false;
 }
   
 
