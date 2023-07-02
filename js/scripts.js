@@ -38,9 +38,29 @@ function Destination(location, landmarks, timeOfYear, notes) {
 }
 //
 
+//UI Logic
+window.addEventListener("load", function() {
+  document.querySelector("form#new-destination"). addEventListener("submit", handleFormSubmission);
+});
 
+let destinationsList = new DestinationsList();
 
-// Destinations.prototype.addLocation = function(location) {
-//   location.id = this.assignId();
-//   this.locations[location.id] = locations;
-// };
+function handleFormSubmission(event) {
+  event.preventDefault();
+  const location = document.querySelector("input#new-location").value;
+  const landmarks = document.querySelector("input#new-landmarks").value;
+  const timeOfYear = document.querySelector("input#new-time-of-year").value;
+  const notes = document.querySelector("input#new-notes").value;
+  let newDestination = new Destination(location, landmarks, timeOfYear, notes);
+  destinationsList.addDestination(newDestination);
+  console.log(destinationsList.destinations);
+
+window.addEventListener("click", function() {
+  th
+  })
+  //document.getElementById("destinations").append(location)
+}
+
+//display destinations
+//display destination details
+  //when user clicks on destination
