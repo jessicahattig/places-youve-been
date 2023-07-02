@@ -1,9 +1,18 @@
-function placesBeen() {
-  this.locations = {};
-  this.landmarks = 0;
+// function DestinationsList() {
+//   this. = {};
+// }
+
+
+//Business logic for destinations
+function Destination(location, landmarks, timeOfYear, notes) {
+  this.location = location;
+  this.landmarks = landmarks;
+  this.timeOfYear = timeOfYear;
+  this.notes = notes;
 }
 
-placesBeen.prototype.addLocation = function(place) {
-  place.id = this.assignId();
-  this.places[place.id] = place;
-}
+
+// Destinations.prototype.addLocation = function(location) {
+//   location.id = this.assignId();
+//   this.locations[location.id] = locations;
+// };
